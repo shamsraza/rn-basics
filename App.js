@@ -1,41 +1,21 @@
 import { StyleSheet, Text, View } from "react-native";
-/* import {createStackNavigator} from "react-navigation-stack";
-import { createAppContainer } from '@react-navigation/native';  */
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import DashboardScreen from "./src/screen/Dashboard";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ComponentsScreens from "./src/screen/ComponentsScreen";
-
-/* export default function App() {
-  return (
-    <View style={styles.container}>
-      <DashboardScreen></DashboardScreen>
-    </View>
-  );
-} */
-
-/* const navigator = createStackNavigator(
-  {
-    Dashboard: DashboardScreen,
-    Components:ComponentsScreens
-  },
-  {
-    initialRouteName: "Components",
-    defaultNavigationOptions: {
-      title: "App",
-    },
-  },
-);
-
-export default createAppContainer(navigator) */
+import ListScreen from "./src/screen/ListScreen";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="List">
         <Stack.Screen name="Dashboard" component={ComponentsScreens} />
+        <Stack.Screen
+          name="List"
+          component={ListScreen}
+          options={{ title: "My List" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
