@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rn-react-basics",
-    "slug": "rn-react-basics",
+    "name": "rn-basics",
+    "slug": "rn-basics",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
