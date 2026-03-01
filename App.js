@@ -12,11 +12,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen
-          name="List"
-          component={ListScreen}
-          options={{ title: "My List" }}
-        />
+        <Stack.Screen name="List" component={ListScreen} />
+        <Stack.Screen name="Components" component={ComponentsScreens} />
       </Stack.Navigator>
     </NavigationContainer>
   );
